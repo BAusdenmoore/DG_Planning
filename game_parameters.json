@@ -1,0 +1,6 @@
+{
+    "players": ["Player 1", "Player 2"],
+    "turns": 10,
+    "initial_score": [0, 0],
+    "score_increment": [1, 1]
+  }
