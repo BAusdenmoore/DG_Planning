@@ -6,61 +6,63 @@ import json
 with open("game_parameters.json", "r") as f:
     game_params = json.load(f)
 
-# Initialize game variables
-players = game_params["players"]
-turns = game_params["turns"]
-scores = game_params["initial_score"]
-score_increment = game_params["score_increment"]
+print(game_params)
 
-st.title("Turn-Based Game Simulator")
+# # Initialize game variables
+# players = game_params["players"]
+# turns = game_params["turns"]
+# scores = game_params["initial_score"]
+# score_increment = game_params["score_increment"]
 
-# Sidebar
-st.sidebar.header("Game Parameters")
-current_turn = st.sidebar.slider("Select Turn", 1, turns, 1)
-current_player = st.sidebar.selectbox("Current Player", players)
+# st.title("Turn-Based Game Simulator")
 
-# Main content
-st.write(f"Current Turn: {current_turn}")
-st.write(f"Current Player: {current_player}")
-st.write(f"{players[0]} Score: {scores[0]}")
-st.write(f"{players[1]} Score: {scores[1]}")
+# # Sidebar
+# st.sidebar.header("Game Parameters")
+# current_turn = st.sidebar.slider("Select Turn", 1, turns, 1)
+# current_player = st.sidebar.selectbox("Current Player", players)
 
-# Simulate turn
-if st.button("Simulate Turn"):
-    if current_player == players[0]:
-        scores[0] += score_increment[0]
-    else:
-        scores[1] += score_increment[1]
-    current_turn += 1
+# # Main content
+# st.write(f"Current Turn: {current_turn}")
+# st.write(f"Current Player: {current_player}")
+# st.write(f"{players[0]} Score: {scores[0]}")
+# st.write(f"{players[1]} Score: {scores[1]}")
 
-# Save updated scores to the JSON file
-game_params["initial_score"] = scores
-with open("game_parameters.json", "w") as f:
-    json.dump(game_params, f)
+# # Simulate turn
+# if st.button("Simulate Turn"):
+#     if current_player == players[0]:
+#         scores[0] += score_increment[0]
+#     else:
+#         scores[1] += score_increment[1]
+#     current_turn += 1
 
-# Display game parameters in the sidebar
-st.sidebar.write("Updated Game Parameters")
-st.sidebar.write(f"Current Turn: {current_turn}")
-st.sidebar.write(f"{players[0]} Score: {scores[0]}")
-st.sidebar.write(f"{players[1]} Score: {scores[1]}")
+# # Save updated scores to the JSON file
+# game_params["initial_score"] = scores
+# with open("game_parameters.json", "w") as f:
+#     json.dump(game_params, f)
 
-# Reset the game
-if st.sidebar.button("Reset Game"):
-    scores = game_params["initial_score"]
-    current_turn = 1
+# # Display game parameters in the sidebar
+# st.sidebar.write("Updated Game Parameters")
+# st.sidebar.write(f"Current Turn: {current_turn}")
+# st.sidebar.write(f"{players[0]} Score: {scores[0]}")
+# st.sidebar.write(f"{players[1]} Score: {scores[1]}")
 
-    # Save the reset scores to the JSON file
-    game_params["initial_score"] = scores
-    with open("game_parameters.json", "w") as f:
-        json.dump(game_params, f)
+# # Reset the game
+# if st.sidebar.button("Reset Game"):
+#     scores = game_params["initial_score"]
+#     current_turn = 1
 
-# Close the sidebar
-st.sidebar.write("")
+#     # Save the reset scores to the JSON file
+#     game_params["initial_score"] = scores
+#     with open("game_parameters.json", "w") as f:
+#         json.dump(game_params, f)
 
-# Add an option to quit the game
-if st.sidebar.button("Quit Game"):
-    st.sidebar.warning("Game Quit")
+# # Close the sidebar
+# st.sidebar.write("")
 
-# Show the app
-st.sidebar.write("")
-st.sidebar.write("Developed by Your Name")
+# # Add an option to quit the game
+# if st.sidebar.button("Quit Game"):
+#     st.sidebar.warning("Game Quit")
+
+# # Show the app
+# st.sidebar.write("")
+# st.sidebar.write("Developed by Your Name")

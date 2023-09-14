@@ -1,6 +1,288 @@
 {
-    "players": ["Player 1", "Player 2"],
-    "turns": 10,
-    "initial_score": [0, 0],
-    "score_increment": [1, 1]
-  }
+    "StartingMaterials": {
+        "Buildings": {
+            "MetalMine": 2,
+            "MineralExtractor": 2,
+            "Farm": 2,
+            "SolarGenerator": 2
+        },
+        "Stores": {
+            "Metal": 30000,
+            "Mineral": 20000,
+            "Food": 10000,
+            "Energy": 1000
+        }
+    },
+    "Outpost": {
+        "Type": "Building",
+        "Limit": 1,
+        "Cost": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": -1,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 0,
+            "Workers": 0,
+            "Research": "None",
+            "Building": "None"
+        },
+        "Production": {
+            "Metal": 300,
+            "Mineral": 200,
+            "Food": 100,
+            "Energy": 0,
+            "Housing": 50000,
+            "SoldierCap": 100000
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },    
+    "MetalMine": {
+        "Type": "Building",
+        "Limit": 999,
+        "Cost": {
+            "Metal": 600,
+            "Mineral": 2000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": -1,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 4,
+            "Workers": 5000,
+            "Research": "None",
+            "Building": "None"
+        },
+        "Production": {
+            "Metal": 300,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": -10,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },  
+    "MineralExtractor": {
+        "Type": "Building",
+        "Limit": 999,
+        "Cost": {
+            "Metal": 3000,
+            "Mineral": 400,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": -1,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 4,
+            "Workers": 5000,
+            "Research": "None",
+            "Building": "None"
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 200,
+            "Food": 0,
+            "Energy": -10,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },  
+    "Farm": {
+        "Type": "Building",
+        "Limit": 999,
+        "Cost": {
+            "Metal": 1500,
+            "Mineral": 1000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": -1,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 4,
+            "Workers": 5000,
+            "Research": "None",
+            "Building": "None"
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 300,
+            "Energy": 0,
+            "Housing": -10,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },  
+    "SolarGenerator": {
+        "Type": "Building",
+        "Limit": 999,
+        "Cost": {
+            "Metal": 1500,
+            "Mineral": 1000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": -1,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 4,
+            "Workers": 5000,
+            "Research": "None",
+            "Building": "None"
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 100,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },
+    "LeisureCenter": {
+        "Type": "Building",
+        "Limit": 1,
+        "Cost": {
+            "Metal": 12000,
+            "Mineral": 8000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": -2,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 8,
+            "Workers": 10000,
+            "Research": "None",
+            "Building": "None"
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 300,
+            "Energy": -10,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0.04
+        },
+        "Value": 0
+    },
+    "LaunchSite": {
+        "Type": "Building",
+        "Limit": 1,
+        "Cost": {
+            "Metal": 15000,
+            "Mineral": 10000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": -2,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 8,
+            "Workers": 10000,
+            "Research": "None",
+            "Building": "None"
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 300,
+            "Energy": -10,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0.04
+        },
+        "Value": 0
+    },
+    "LivingQuarters": {
+        "Type": "Building",
+        "Limit": 999,
+        "Cost": {
+            "Metal": 2400,
+            "Mineral": 1600,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": -1,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 6,
+            "Workers": 25000,
+            "Research": "None",
+            "Building": "None"
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": -10,
+            "Housing": 50000,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    }
+}
