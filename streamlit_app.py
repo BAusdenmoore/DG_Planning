@@ -1,68 +1,39 @@
-
 import streamlit as st
+from DisplayQueue import writeQueue
 import json
+import numpy as np
+import pandas as pd
 
-# Load game parameters from the JSON file
-with open("game_parameters.json", "r") as f:
-    game_params = json.load(f)
+@st.cache_data
+def LoadData():
+    st.session_state['BuildQueue'] = {} # Will be a dictionary of turn, building name
+    st.session_state['ShipQueue'] = {} # Will be a dictionary of turn, ship name
+    st.session_state['Buildings'] = {} # Will be a dictionary of turn, list of dictionary containing building and count
+    st.session_state['Resources'] = { "Metal": 0, "Mineral": 0, "Food": 0, "Energy": 0 }
+    # Load game parameters from the JSON file
+    with open("game_parameters.json", "r") as f:
+        game_params = json.load(f)
+    
+    # Load data from game_params
+    for key in game_params.keys():
+        if key == 'StartingMaterials':            
+            for building in game_params[key]['Buildings'].keys():
+                st.session_state['Buildings'][building] = game_params[key]['Buildings'][building]
+            for resource in game_params[key]['Stores'].keys():
+                st.session_state['Resources'][resource] = game_params[key]['Stores'][resource]
+        else:
+            if game_params[key]['Type'] == 'Building':
+                st.write('Building')
+            elif game_params[key]['Type'] == 'Ship':
+                st.write('Ship')
 
-print(game_params)
+LoadData()
+st.title("DarkGalaxy Build List Generator")
+col1, col2 = st.columns([.4, .6])
+col1.subheader("Settings and Controls")
+col2.subheader("Current Buildlist")
+st.write(st.session_state)
 
-# # Initialize game variables
-# players = game_params["players"]
-# turns = game_params["turns"]
-# scores = game_params["initial_score"]
-# score_increment = game_params["score_increment"]
+st.session_state['endTurn'] = col1.number_input("Number of turns to evaluate: ", value=10)
 
-# st.title("Turn-Based Game Simulator")
-
-# # Sidebar
-# st.sidebar.header("Game Parameters")
-# current_turn = st.sidebar.slider("Select Turn", 1, turns, 1)
-# current_player = st.sidebar.selectbox("Current Player", players)
-
-# # Main content
-# st.write(f"Current Turn: {current_turn}")
-# st.write(f"Current Player: {current_player}")
-# st.write(f"{players[0]} Score: {scores[0]}")
-# st.write(f"{players[1]} Score: {scores[1]}")
-
-# # Simulate turn
-# if st.button("Simulate Turn"):
-#     if current_player == players[0]:
-#         scores[0] += score_increment[0]
-#     else:
-#         scores[1] += score_increment[1]
-#     current_turn += 1
-
-# # Save updated scores to the JSON file
-# game_params["initial_score"] = scores
-# with open("game_parameters.json", "w") as f:
-#     json.dump(game_params, f)
-
-# # Display game parameters in the sidebar
-# st.sidebar.write("Updated Game Parameters")
-# st.sidebar.write(f"Current Turn: {current_turn}")
-# st.sidebar.write(f"{players[0]} Score: {scores[0]}")
-# st.sidebar.write(f"{players[1]} Score: {scores[1]}")
-
-# # Reset the game
-# if st.sidebar.button("Reset Game"):
-#     scores = game_params["initial_score"]
-#     current_turn = 1
-
-#     # Save the reset scores to the JSON file
-#     game_params["initial_score"] = scores
-#     with open("game_parameters.json", "w") as f:
-#         json.dump(game_params, f)
-
-# # Close the sidebar
-# st.sidebar.write("")
-
-# # Add an option to quit the game
-# if st.sidebar.button("Quit Game"):
-#     st.sidebar.warning("Game Quit")
-
-# # Show the app
-# st.sidebar.write("")
-# st.sidebar.write("Developed by Your Name")
+writeQueue(col2)

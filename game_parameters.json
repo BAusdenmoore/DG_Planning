@@ -930,5 +930,447 @@
             "Population": 0
         },
         "Value": 0
+    },
+    "Fighter": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 2000,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 4,
+            "Workers": 500,
+            "Research": ["None"],
+            "Building": ["ShipYard, LightWeaponsFactory"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0.24
+    },
+    "Bomber": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 0,
+            "Mineral": 4000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 6,
+            "Workers": 1500,
+            "Research": ["None"],
+            "Building": ["ShipYard, LightWeaponsFactory"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0.72
+    },
+    "Frigate": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 12000,
+            "Mineral": 8000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 10,
+            "Workers": 5000,
+            "Research": ["None"],
+            "Building": ["ShipYard, LightWeaponsFactory"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 2.88
+    },
+    "Destroyer": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 40000,
+            "Mineral": 40000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 14,
+            "Workers": 25000,
+            "Research": ["Destroyer"],
+            "Building": ["ShipYard, HeavyWeaponsFactory"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 12
+    },
+    "Cruiser": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 120000,
+            "Mineral": 60000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 20,
+            "Workers": 50000,
+            "Research": ["Cruiser"],
+            "Building": ["SpaceDock, LightWeaponsFactory"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 25.2
+    },
+    "Battleship": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 600000,
+            "Mineral": 400000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 26,
+            "Workers": 300000,
+            "Research": ["Battleship"],
+            "Building": ["SpaceDock, HeavyWeaponsFactory"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 144
+    },
+    "Freighter": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 24000,
+            "Mineral": 16000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 8,
+            "Workers": 20000,
+            "Research": ["None"],
+            "Building": ["ShipYard"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },
+    "Merchant": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 48000,
+            "Mineral": 32000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 10,
+            "Workers": 40000,
+            "Research": ["Merchant"],
+            "Building": ["ShipYard"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },
+    "Trader": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 72000,
+            "Mineral": 48000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 12,
+            "Workers": 60000,
+            "Research": ["Trader"],
+            "Building": ["SpaceDock"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },
+    "Hulk": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 120000,
+            "Mineral": 80000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 14,
+            "Workers": 96000,
+            "Research": ["None"],
+            "Building": ["SpaceDock"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },
+    "OutpostShip": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 30000,
+            "Mineral": 20000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 16,
+            "Workers": 50000,
+            "Research": ["None"],
+            "Building": ["ShipYard"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },
+    "InvasionShip": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 30000,
+            "Mineral": 20000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 16,
+            "Workers": 50000,
+            "Research": ["None"],
+            "Building": ["ShipYard, LightWeaponsFactory"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
+    },
+    "ColonizationShip": {
+        "Type": "Ship",
+        "Limit": 99999,
+        "Cost": {
+            "Metal": 600000,
+            "Mineral": 400000,
+            "Food": 0,
+            "Energy": 0,
+            "GroundSpace": 0,
+            "OrbitalSpace": 0
+            },
+        "Requirements": {
+            "Duration": 24,
+            "Workers": 200000,
+            "Research": ["OrbitalRing"],
+            "Building": ["SpaceDock, OrbitalRing"]
+        },
+        "Production": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Housing": 0,
+            "SoldierCap": 0
+        },
+        "Modifiers": {
+            "Metal": 0,
+            "Mineral": 0,
+            "Food": 0,
+            "Energy": 0,
+            "Population": 0
+        },
+        "Value": 0
     }
 }
