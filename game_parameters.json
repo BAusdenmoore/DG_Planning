@@ -4,7 +4,8 @@
             "MetalMine": 2,
             "MineralExtractor": 2,
             "Farm": 2,
-            "SolarGenerator": 2
+            "SolarGenerator": 2,
+            "Outpost": 1
         },
         "Stores": {
             "Metal": 30000,

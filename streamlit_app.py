@@ -10,6 +10,8 @@ def LoadData():
     st.session_state['ShipQueue'] = {} # Will be a dictionary of turn, ship name
     st.session_state['Buildings'] = {} # Will be a dictionary of turn, list of dictionary containing building and count
     st.session_state['Resources'] = { "Metal": 0, "Mineral": 0, "Food": 0, "Energy": 0 }
+    st.session_state['BuildingList'] = []
+    st.session_state['ShipList'] = []
     # Load game parameters from the JSON file
     with open("game_parameters.json", "r") as f:
         game_params = json.load(f)
@@ -23,9 +25,9 @@ def LoadData():
                 st.session_state['Resources'][resource] = game_params[key]['Stores'][resource]
         else:
             if game_params[key]['Type'] == 'Building':
-                st.write('Building')
+                st.session_state['BuildingList'].append({key: game_params[key]})
             elif game_params[key]['Type'] == 'Ship':
-                st.write('Ship')
+                st.session_state['ShipList'].append({key: game_params[key]})
 
 LoadData()
 st.title("DarkGalaxy Build List Generator")
