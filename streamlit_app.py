@@ -33,8 +33,11 @@ LoadData()
 st.title("DarkGalaxy Build List Generator")
 col1, col2 = st.columns([.4, .6])
 col1.subheader("Settings and Controls")
+col1.write('Starting Buildings')
+buildingDF = pd.json_normalize(st.session_state['Buildings'])
+col1.write(buildingDF.T)
+
 col2.subheader("Current Buildlist")
-st.write(st.session_state)
 
 st.session_state['endTurn'] = col1.number_input("Number of turns to evaluate: ", value=10)
 
